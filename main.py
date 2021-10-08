@@ -24,13 +24,13 @@ def home():
         mail = request.form["email"]
         message = request.form["message"]
 
-        with smtplib.SMTP("smtp.gmail.com") as connection:
-            connection.starttls()
-            connection.login(user=FROM_EMAIL,
-                             password=PASS)
-            connection.sendmail(from_addr=FROM_EMAIL,
-                                to_addrs=TO_EMAIL,
-                                msg=f"Subject:A message from your portfolio website \n\n. Hi my name is{name}.{message}. This is my email id: {mail}")
+        # with smtplib.SMTP("smtp.gmail.com") as connection:
+        #     connection.starttls()
+        #     connection.login(user=FROM_EMAIL,
+        #                      password=PASS)
+        #     connection.sendmail(from_addr=FROM_EMAIL,
+        #                         to_addrs=TO_EMAIL,
+        #                         msg=f"Subject:A message from your portfolio website \n\n. Hi my name is{name}.{message}. This is my email id: {mail}")
         return render_template("index.html",sent = True)
     return render_template("index.html",sent = False)
 
