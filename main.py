@@ -11,9 +11,13 @@ app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
-FROM_EMAIL = os.environ.get("FROM_EMAIL")
-TO_EMAIL = os.environ.get("TO_EMAIL")
-PASS = os.environ.get("PASSWORD")
+# FROM_EMAIL = os.environ.get("FROM_EMAIL")
+# TO_EMAIL = os.environ.get("TO_EMAIL")
+# PASS = os.environ.get("PASSWORD")
+
+FROM_EMAIL = "thesender016@gmail.com"
+TO_EMAIL = "shotovenkatesh705@gmail.com"
+PASS = "toritheturtle"
 
 @app.route("/", methods=["GET", "POST"])
 def home():
