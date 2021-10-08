@@ -151,17 +151,14 @@
 
 
 
-         <form name="sentMessage">
-
-            <input  class="form-control form-labels" placeholder="Name" id="n" name = "name">
-            <input type="email" class="form-control form-labels" placeholder="Email Address" id="email" name = "email">
+         <form name="sentMessage" action="https://formsubmit.co/thesender016@gmail.com" method="POST">
+            <input  class="form-control form-labels" placeholder="Name" id="n" name = "name" required>
+            <input type="email" class="form-control form-labels" placeholder="Email Address" id="email" name = "email" required>
            <textarea rows="5" name = "message" class="form-control form-labels" placeholder="Your Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
            <button type="submit" class="BUTTON_MZU send-button"><span class="mail-img"><img src="static/images/sending.png" alt="mail sending icon" width=25, height=25></span>Send</button>
-           {% if sent %}
-           <p class = "form-submit">Message sent!</p>
-           {% else %}
-           <p class = "form-submit" style="color:#343A40"></p>
-           {% endif %}
+
+
+
 
           </form>
         </div>

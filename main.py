@@ -32,7 +32,7 @@ def home():
         #                         to_addrs=TO_EMAIL,
         #                         msg=f"Subject:A message from your portfolio website \n\n. Hi my name is{name}.{message}. This is my email id: {mail}")
         # return render_template("index.html",sent = True)
-    return render_template("index.html",sent = False)
+    return render_template("index.html")
 
 
 @app.route("/projects")
