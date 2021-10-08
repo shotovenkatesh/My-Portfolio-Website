@@ -1,8 +1,15 @@
+import sys
+
 from flask import Flask, render_template, request, redirect, url_for
 import os
 import smtplib
+import logging
+
+
 
 app = Flask(__name__)
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
 
 FROM_EMAIL = os.environ.get("FROM_EMAIL")
 TO_EMAIL = os.environ.get("TO_EMAIL")
