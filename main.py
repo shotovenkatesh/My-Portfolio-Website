@@ -17,7 +17,7 @@ PASS = os.environ.get("PASSWORD")
 
 
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def home():
     # if request.method == "POST":
     #     name = request.form["name"]
