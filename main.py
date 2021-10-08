@@ -19,10 +19,10 @@ PASS = os.environ.get("PASSWORD")
 
 @app.route("/", methods=["GET", "POST"])
 def home():
-    if request.method == "POST":
-        name = request.form["name"]
-        mail = request.form["email"]
-        message = request.form["message"]
+    # if request.method == "POST":
+    #     name = request.form["name"]
+    #     mail = request.form["email"]
+    #     message = request.form["message"]
 
         # with smtplib.SMTP("smtp.gmail.com") as connection:
         #     connection.starttls()
@@ -31,7 +31,7 @@ def home():
         #     connection.sendmail(from_addr=FROM_EMAIL,
         #                         to_addrs=TO_EMAIL,
         #                         msg=f"Subject:A message from your portfolio website \n\n. Hi my name is{name}.{message}. This is my email id: {mail}")
-        return render_template("index.html",sent = True)
+        # return render_template("index.html",sent = True)
     return render_template("index.html",sent = False)
 
 
